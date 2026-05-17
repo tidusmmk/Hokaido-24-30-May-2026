@@ -1,313 +1,125 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>北海道 6日5夜自駕遊 | 4人鋼鐵熱血精華線</title>
+    <title>北海道 6日5夜自駕遊 - 鋼鐵熱血精華精進版</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
-
-        :root {
-            --primary-color: #1A365D; /* 深藍夜空 */
-            --secondary-color: #2B6CB0; /* 湖水藍 */
-            --accent-color: #DD6B20; /* 暖橘色 */
-            --background-color: #F7FAFC; /* 雪白背景 */
-            --card-bg: #FFFFFF;
-            --hotel-bg: #F0F7FF; /* 淺藍色酒店框 */
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans TC', sans-serif; }
-        body { background-color: var(--background-color); color: #2D3748; line-height: 1.6; }
-
-        header {
-            background: linear-gradient(rgba(26, 54, 93, 0.6), rgba(26, 54, 93, 0.6)), url('https://images.unsplash.com/photo-1542051812871-75565027581c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-            height: 50vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: white; text-align: center; padding: 0 20px;
-        }
-
-        header h1 { font-size: 2.8rem; margin-bottom: 10px; letter-spacing: 2px; }
-        header p { font-size: 1.1rem; background-color: var(--accent-color); padding: 8px 20px; border-radius: 25px; font-weight: 500; }
-
-        .container { max-width: 850px; margin: -50px auto 50px auto; padding: 0 15px; }
-
-        /* Summary Card */
-        .overview-card {
-            background: var(--card-bg); padding: 25px; border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08); margin-bottom: 30px; border-left: 5px solid var(--secondary-color);
-        }
-        .overview-list { list-style: none; margin-top: 10px; }
-        .overview-list li { margin-bottom: 8px; display: flex; align-items: flex-start; font-size: 0.95rem; }
-        .overview-list li::before { content: "📍"; margin-right: 10px; }
-
-        h2.section-title { text-align: center; color: var(--primary-color); margin: 40px 0 20px 0; font-size: 2rem; font-weight: 700; }
-
-        /* Day Cards */
-        .day-card { margin-bottom: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; background: var(--card-bg); }
-        .day-header {
-            background-color: var(--card-bg); padding: 20px 25px; cursor: pointer;
-            display: flex; justify-content: space-between; align-items: center;
-            font-weight: 700; font-size: 1.1rem; color: var(--primary-color);
-            transition: background 0.3s;
-        }
-        .day-header:hover { background-color: #f8fafc; }
-        .day-badge { background-color: var(--secondary-color); color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.9rem; margin-right: 10px; }
-
-        .day-content { background-color: #fafbfc; padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; }
-        .day-content.active { padding: 25px; max-height: 1200px; border-top: 1px solid #e2e8f0; }
-
-        .activity { display: flex; margin-bottom: 20px; }
-        .activity-time { font-weight: 700; color: var(--accent-color); min-width: 85px; }
-        .activity-details h4 { color: var(--primary-color); margin-bottom: 5px; font-size: 1.1rem; }
-        .activity-details p { font-size: 0.95rem; color: #4A5568; }
-
-        /* Hotel Box */
-        .hotel-box {
-            background-color: var(--hotel-bg);
-            border: 1.5px solid #BEE3F8;
-            padding: 15px; border-radius: 10px; margin-top: 10px;
-            display: flex; align-items: flex-start; gap: 12px;
-        }
-        .hotel-box .hotel-icon { font-size: 1.5rem; }
-        .hotel-box .hotel-name { font-weight: 700; color: var(--primary-color); display: block; }
-        .hotel-box .hotel-tips { font-size: 0.85rem; color: #4A5568; margin-top: 3px; }
-
-        .tag { display: inline-block; background: #E2E8F0; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-top: 5px; }
-
-        footer { text-align: center; padding: 40px; background-color: var(--primary-color); color: white; margin-top: 50px; }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.2rem; }
-            .activity { flex-direction: column; }
-            .activity-time { margin-bottom: 5px; }
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        h1 { color: #0056b3; border-bottom: 3px solid #0056b3; padding-bottom: 10px; font-size: 1.8rem; }
+        h2 { color: #17a2b8; border-bottom: 2px solid #17a2b8; padding-bottom: 5px; margin-top: 30px; font-size: 1.4rem; }
+        h3 { background: #e9ecef; padding: 8px 12px; border-left: 5px solid #ffc107; margin-top: 25px; font-size: 1.2rem; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight-box { background-color: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 5px; margin: 15px 0; font-size: 0.95rem; }
+        .info-badge { background: #6c757d; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-weight: bold; }
+        .code-style { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: #d63384; font-size: 0.95rem; font-weight: bold; }
+        .btn { display: inline-block; background: #28a745; color: white; text-decoration: none; padding: 12px 20px; border-radius: 5px; font-weight: bold; margin-top: 20px; text-align: center; width: 100%; box-sizing: border-box; }
+        .btn:hover { background: #218838; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>北海道 6日5夜自駕遊</h1>
-        <p>🚗 4人自駕．鋼鐵熱血精華線</p>
-    </header>
+    <h1>🚗 北海道 6日5夜自駕遊</h1>
+    <p><strong>🔥 4人自駕．鋼鐵熱血精華精進版</strong></p>
 
-    <div class="container">
-        
-        <div class="overview-card">
-            <h3>📌 旅程概覽與提醒</h3>
-            <ul class="overview-list">
-                <li><strong>航班：</strong>HB880 (抵達) / HB881 (離境)</li>
-                <li><strong>車型建議：</strong>7人車 (Noah/Voxy/Alphard) 以容納4人+4件大行李。</li>
-                <li><strong>酒店安排：</strong>首晚入住經典溫泉旅館，函館選用空間大的公寓式酒店。</li>
-                <li><strong>自駕注意：</strong>租車需備國際牌，務必加購 <strong>HEP (High Pass)</strong> 節省路費。</li>
-            </ul>
-        </div>
-
-        <h2 class="section-title">每日行程詳細</h2>
-
-        <!-- DAY 1 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 1</span><span>新千歲機場 ➡️ 登別溫泉</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">下午</div>
-                    <div class="activity-details">
-                        <h4>✈️ 抵達與取車</h4>
-                        <p>辦理取車手續，開車前往登別（約1小時）。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">晚上</div>
-                    <div class="activity-details">
-                        <h4>♨️ 溫泉饗宴</h4>
-                        <p>享用酒店自助晚餐（和牛、長腳蟹），餐後散步至閻魔堂。</p>
-                    </div>
-                </div>
-                <div class="hotel-box">
-                    <span class="hotel-icon">🏨</span>
-                    <div>
-                        <span class="hotel-name">第一瀧本館 (Dai-ichi Takimotokan)</span>
-                        <p class="hotel-tips">💡 必試：超大溫泉區擁有 5 種不同泉質，且正對著地獄谷美景。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 2 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 2</span><span>地獄谷 ➡️ 函館百萬夜景</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">早上</div>
-                    <div class="activity-details">
-                        <h4>🌋 登別地獄谷</h4>
-                        <p>酒店步行即達，觀察震撼的火山口遺跡。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">下午</div>
-                    <div class="activity-details">
-                        <h4>🚗 海岸自駕前往函館</h4>
-                        <p>車程約 2.5 小時。抵達後逛金森紅磚倉庫。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">傍晚</div>
-                    <div class="activity-details">
-                        <h4>🌃 函館山夜景</h4>
-                        <p>乘纜車觀看世界三大夜景。晚餐：幸運小丑漢堡。</p>
-                    </div>
-                </div>
-                <div class="hotel-box">
-                    <span class="hotel-icon">🏨</span>
-                    <div>
-                        <span class="hotel-name">FAV HOTEL 函館 (FAV HOTEL HAKODATE)</span>
-                        <p class="hotel-tips">💡 亮點：公寓式設計，4人房空間極大且有小廚房，就在朝市旁邊！</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 3 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 3</span><span>函館深度遊：海鮮與歷史</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">08:30</div>
-                    <div class="activity-details">
-                        <h4>🦑 函館朝市</h4>
-                        <p>酒店下樓即達！體驗釣活烏賊及享用海鮮丼早餐。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">下午</div>
-                    <div class="activity-details">
-                        <h4>⭐ 五稜郭 & 元町</h4>
-                        <p>登上五稜郭塔，下午在八幡坂拍直通大海的 4 人合照。</p>
-                    </div>
-                </div>
-                <div class="hotel-box">
-                    <span class="hotel-icon">🏨</span>
-                    <div>
-                        <span class="hotel-name">續住：FAV HOTEL 函館</span>
-                        <p class="hotel-tips">💡 第二晚可以買些北海道牛奶與零食在房間聚會。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 4 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 4</span><span>長途挑戰：函館 ➡️ 小樽 ➡️ 札幌</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">全日</div>
-                    <div class="activity-details">
-                        <h4>🛣️ 縱貫拉車行程</h4>
-                        <p>今日駕駛時間較長（約 4.5 小時）。中停中山峠休息站吃炸薯條。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">傍晚</div>
-                    <div class="activity-details">
-                        <h4>🛶 小樽運河黃昏</h4>
-                        <p>欣賞小樽運河點燈，隨後開往札幌入住。</p>
-                        <span class="tag">晚餐：成吉思汗烤肉</span>
-                    </div>
-                </div>
-                <div class="hotel-box">
-                    <span class="hotel-icon">🏨</span>
-                    <div>
-                        <span class="hotel-name">札幌酒店 (待定)</span>
-                        <p class="hotel-tips">建議選擇狸小路或大通公園周邊，方便最後血拼。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 5 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 5</span><span>札幌：景點觀光 ➡️ 全日掃貨</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">早上</div>
-                    <div class="activity-details">
-                        <h4>🍫 白色戀人公園</h4>
-                        <p>參觀巧克力工廠，隨後前往北海道神宮。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">下午</div>
-                    <div class="activity-details">
-                        <h4>🛍️ 狸小路大進攻</h4>
-                        <p>最後藥妝、手信衝刺。車停酒店，步行血拼最輕鬆。</p>
-                    </div>
-                </div>
-                <div class="hotel-box">
-                    <span class="hotel-icon">🏨</span>
-                    <div>
-                        <span class="hotel-name">續住：札幌酒店 (待定)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 6 -->
-        <div class="day-card">
-            <div class="day-header" onclick="toggleDay(this)">
-                <div><span class="day-badge">Day 6</span><span>新千歲機場最後衝刺 ✈️ 回港</span></div>
-                <span>▼</span>
-            </div>
-            <div class="day-content">
-                <div class="activity">
-                    <div class="activity-time">上午</div>
-                    <div class="activity-details">
-                        <h4>⛽ 還車與接駁</h4>
-                        <p>加滿油後於機場周邊還車，乘接駁車往航廈。</p>
-                    </div>
-                </div>
-                <div class="activity">
-                    <div class="activity-time">12:30</div>
-                    <div class="activity-details">
-                        <h4>🍜 機場國內線大暴走</h4>
-                        <p>在新千歲機場 3 樓拉麵道場吃一幻拉麵。辦理登機後，繼續在禁區內補購伴手禮。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="highlight-box">
+        <strong>📌 旅程概覽與提醒</strong><br>
+        <ul>
+            <li><strong>航班資訊：</strong> 去程 HB880 (預計 15:05 抵達) ｜ 回程 HB881</li>
+            <li><strong>車型建議：</strong> 7人車 (Noah/Voxy/Alphard) ※ 務必將第三排座椅折疊，以完美容納 4 人 + 4 件 28 吋大行李。</li>
+            <li><strong>自駕注意：</strong> 租車需備國際牌、台灣駕照正本與日文譯本（如適用）。務必加購 <strong>HEP (Hokkaido Express Pass)</strong> 節省路費。</li>
+            <li><strong>5月下旬限定體感：</strong> 氣溫約 10°C - 20°C，早晚溫差大。此時大通公園正值「丁香花節」，五稜郭則轉為「翠綠星芒大森林」。</li>
+        </ul>
     </div>
 
-    <footer>
-        <p>🚗 祝你們四人北海道公路旅行玩得開心！ ❄️</p>
-    </footer>
+    <h2>📅 每日行程詳細</h2>
 
-    <script>
-        function toggleDay(element) {
-            var content = element.nextElementSibling;
-            var icon = element.querySelector('span:last-child');
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                icon.textContent = "▼";
-            } else {
-                content.classList.add('active');
-                icon.textContent = "▲";
-            }
-        }
-    </script>
+    <h3>Day 1 ✈️ 抵達、極速取車與溫泉饗宴</h3>
+    <ul>
+        <li><strong>下午：機場大衝刺與取車</strong><br>HB880 降落後，請派代表加速衝海關辦理通關。搭乘接駁車前往機場外營業所取車，開車前往登別（車程約 1 小時）。<br><small>💡 鋼鐵提醒：出發前務必電郵通知飯店會稍晚 Check-in，確保保留晚餐席位。</small></li>
+        <li><strong>晚上：溫泉饗宴與閻魔堂</strong><br>享用酒店自助晚餐（和牛、長腳蟹），餐後散步至閻魔堂看變臉。</li>
+        <li><strong>🏨 住宿與導航：</strong>
+            <ul>
+                <li>♨️ 登別第一瀧本館：MAPCODE <span class="code-style">603 287 057*55</span></li>
+                <li>👹 閻魔堂（溫泉街）：MAPCODE <span class="code-style">603 257 433*58</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Day 2 🌋 地獄谷、金森倉庫與世界級夜景</h3>
+    <ul>
+        <li><strong>早上：登別地獄谷</strong><br>酒店步行即達，觀察震撼的火山口遺跡。</li>
+        <li><strong>下午：海岸自駕前往函館</strong><br>車程約 2.5 - 3 小時。中途可於大沼國定公園稍作停留。抵達函館後，直奔金森紅磚倉庫逛街。</li>
+        <li><strong>傍晚：幸運小丑漢堡（提早享用）</strong><br><small>💡 優化策略：看完夜景下山人潮極多，建議 16:30-17:30 先在倉庫旁的幸運小丑漢堡（末廣店）享用晚餐，儲備體力。</small></li>
+        <li><strong>晚上：函館山夜景</strong><br>乘纜車觀看世界三大夜景。下山後直接回酒店休息。</li>
+        <li><strong>🏨 住宿與導航：</strong>
+            <ul>
+                <li>🌋 登別地獄谷停車場：MAPCODE <span class="code-style">603 288 425*85</span></li>
+                <li>🌲 大沼國定公園：MAPCODE <span class="code-style">86 815 178*00</span></li>
+                <li>🧱 金森紅磚倉庫停車場：MAPCODE <span class="code-style">86 041 552*33`</span></li>
+                <li>🤡 幸運小丑漢堡 (末廣店)：MAPCODE <span class="code-style">86 041 516*00</span></li>
+                <li>🌃 函館山索道山下站：MAPCODE <span class="code-style">86 041 004*55</span></li>
+                <li>🏨 FAV HOTEL 函館：MAPCODE <span class="code-style">86 072 546*30</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Day 3 🦑 函館朝市、翠綠五稜郭與元町</h3>
+    <ul>
+        <li><strong>08:30：函館朝市海鮮暴走</strong><br>酒店下樓即達！體驗釣活烏賊及享用超新鮮海鮮丼早餐。</li>
+        <li><strong>下午：五稜郭綠森林 & 元町散策</strong><br>登上五稜郭塔俯瞰星形翠綠森林大景。下午在八幡坂拍直通大海的 4 人鋼鐵合照。</li>
+        <li><strong>🏨 住宿與導航：</strong>
+            <ul>
+                <li>🦑 函館朝市停車場：MAPCODE <span class="code-style">86 072 321*88</span></li>
+                <li>⭐ 五稜郭塔觀光停車場：MAPCODE <span class="code-style">86 165 294*14</span></li>
+                <li>📸 八幡坂（最美視角）：MAPCODE <span class="code-style">86 040 216*71</span></li>
+                <li>🏨 續住 FAV HOTEL 函館：MAPCODE <span class="code-style">86 072 546*30</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Day 4 🛣️ 人車拉力！縱貫北海道拉車行程</h3>
+    <ul>
+        <li><strong>全日：函館 ➔ 小樽 ➔ 札幌 縱貫線（長達 4.5 小時）</strong><br><small>💡 路線優化：建議全程走高速公路最省體力。中途可停靠有珠山服務區 (SA) 休息。</small></li>
+        <li><strong>傍晚：小樽運河黃昏與點燈</strong><br>約 16:30 抵達小樽欣賞點燈美景，隨後開往札幌入住。</li>
+        <li><strong>晚餐：成吉思汗烤肉</strong><br>名店（如：達摩）排隊時間長，建議提早預約或選擇深夜場。</li>
+        <li><strong>🏨 住宿與導航：</strong>
+            <ul>
+                <li>⚓ 有珠山服務區 (SA)：MAPCODE <span class="code-style">321 445 744*06</span></li>
+                <li>🍟 中山峠休息站（若走山路）：MAPCODE <span class="code-style">759 672 363*58</span></li>
+                <li>🛶 小樽運河停車場：MAPCODE <span class="code-style">493 690 495*11`</span></li>
+                <li>🏨 札幌住宿選擇請參閱酒店專頁。</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Day 5 🍫 白色戀人、大通丁香花節與狸小路大進攻</h3>
+    <ul>
+        <li><strong>早上：白色戀人公園 & 北海道神宮</strong><br>參觀巧克力工廠，隨後前往北海道神宮參拜。</li>
+        <li><strong>下午：大通公園與狸小路大進攻</strong><br>去大通公園逛「札幌丁香花節」美食市集，隨後進行最後藥妝、手信衝刺。<br><small>💡 聰明省錢小撇步：可考慮在 Day 4 晚上抵達札幌時直接「市區還車」，省下兩晚酒店停車費！</small></li>
+        <li><strong>🏨 導航：</strong>
+            <ul>
+                <li>🍫 白色戀人公園：MAPCODE <span class="code-style">9 602 325*33</span></li>
+                <li>⛩️ 北海道神宮：MAPCODE <span class="code-style">9 488 411*74</span></li>
+                <li>🛍️ 狸小路4丁目：MAPCODE <span class="code-style">9 492 154*52</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Day 6 🍜 完美收尾！新千歲機場國內線大暴走</h3>
+    <ul>
+        <li><strong>09:30：從札幌市區出發</strong><br>開車前往機場周邊加油、辦理還車手續。</li>
+        <li><strong>11:30：抵達機場，辦理登機</strong><br>搭乘接駁車抵達航廈，辦理行李託運。</li>
+        <li><strong>12:30：機場國內線大暴走</strong><br>在 3 樓拉麵道場吃「一幻拉麵」，隨後在禁區內瘋狂補購伴手禮。</li>
+        <li><strong>✈️ 導航：</strong>
+            <ul>
+                <li>新千歲機場國內線：MAPCODE <span class="code-style">113 831 223*44</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <a href="./hotels.html" class="btn">👉 點我查看 🏨 完整酒店詳細資訊與聯絡電話</a>
+
 </body>
 </html>
